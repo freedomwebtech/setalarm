@@ -14,16 +14,7 @@ def audio():
       print(data)
     return data
     
-def audio1():
-    # Record Audio
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-      print("Say something!")
-      r.adjust_for_ambient_noise(source)
-      audio1 = r.listen(source)
-      data1 = r.recognize_google(audio1)
-      print(data1)
-    return data1
+
             
 def speak(audiostring):
     tts=gTTS(text=audiostring,lang="en")
